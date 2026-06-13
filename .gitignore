@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# project tracking artifacts
+BUILD_ID
+*-manifest.json
+*-server-files.json
+trace
+trace-build
+turbopack
+.claude/
+
+# IDE and local editor configurations
+.vscode/
+
+# AI agent logs and local runtime diagnostics
+AGENTS.md
+CLAUDE.md
