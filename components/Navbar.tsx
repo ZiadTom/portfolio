@@ -1,3 +1,7 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 
@@ -9,6 +13,20 @@ const navLinks = [
 ]
 
 export default function Navbar() {
+  const [showAvatar, setShowAvatar] = useState(false)
+
+  useEffect(() => {
+    const heroPhoto = document.querySelector<HTMLElement>('section img')
+    if (!heroPhoto) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowAvatar(!entry.isIntersecting),
+      { threshold: 0 }
+    )
+    observer.observe(heroPhoto)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/50">
       <div className="max-w-7xl mx-auto px-6">
@@ -25,8 +43,28 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop: nav links + social + CTA */}
+          {/* Desktop: avatar + nav links + social + CTA */}
           <div className="hidden md:flex items-center gap-10">
+
+            {/* Scroll-triggered avatar */}
+            <div
+              className={`transition-all duration-300 ${
+                showAvatar
+                  ? 'opacity-100 scale-100'
+                  : 'opacity-0 scale-75 pointer-events-none'
+              }`}
+            >
+              <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 ring-2 ring-zinc-700">
+                <Image
+                  src="/me.jpg"
+                  alt="Ziad Altom"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+
             <div className="flex items-center gap-8 text-sm font-medium">
               {navLinks.map((link) => (
                 <a
@@ -67,6 +105,25 @@ export default function Navbar() {
             >
               Get In Touch
             </a>
+          </div>
+
+          {/* Mobile: scroll-triggered avatar on the right */}
+          <div
+            className={`md:hidden transition-all duration-300 ${
+              showAvatar
+                ? 'opacity-100 scale-100'
+                : 'opacity-0 scale-75 pointer-events-none'
+            }`}
+          >
+            <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 ring-2 ring-zinc-700">
+              <Image
+                src="/images/profile.jpg"
+                alt="Ziad Altom"
+                width={36}
+                height={36}
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
           </div>
         </div>
 

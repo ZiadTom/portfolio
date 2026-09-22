@@ -8,7 +8,7 @@ export default function About() {
           {/* Left Column - Heading */}
           <div className="lg:w-1/3">
             <div className="sticky top-28">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-emerald-400">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white">
                 About Me
               </h2>
             </div>
@@ -17,24 +17,23 @@ export default function About() {
           {/* Right Column - Content */}
           <div className="lg:w-2/3 space-y-8 text-lg text-zinc-300 leading-relaxed">
             <p>
-              I'm a passionate Software Engineer and Back-End Developer based in Damascus, Syria. 
-              With a strong foundation in software engineering principles, I specialize in building 
+              I'm a passionate Software Engineer and Back-End Developer based in Damascus, Syria.
+              With a strong foundation in software engineering principles, I specialize in building
               scalable and maintainable backend systems.
             </p>
 
             <p>
-              Complete understanding of ASP.NET Core, and everything related to it, including C#, linq, Entity Framework, and more. I have experience in designing and implementing RESTful APIs, 
-              and I'm proficient in using modern tools and frameworks to create efficient and robust applications.
+              I have a thorough understanding of ASP.NET Core and its ecosystem, including C#, LINQ,
+              Entity Framework, and more. I have experience designing and implementing RESTful APIs,
+              and I'm proficient in modern tools and frameworks for building efficient and robust applications.
             </p>
 
-            <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-white font-semibold mb-4 text-xl">Education</h3>
-                <div className="text-zinc-400">
-                  <p className="font-medium text-white">Bachelor's in Software Engineering and Information Systems</p>
-                  <p>Syrian Private University (SPU)</p>
-                  <p className="text-sm text-zinc-500">2021 – 2025</p>
-                </div>
+            <div className="pt-6">
+              <h3 className="text-white font-semibold mb-4 text-xl">Education</h3>
+              <div className="text-zinc-400">
+                <p className="font-medium text-white">Bachelor's in Software Engineering and Information Systems</p>
+                <p>Syrian Private University (SPU)</p>
+                <p className="text-sm text-zinc-500">2021 – 2025</p>
               </div>
             </div>
           </div>
