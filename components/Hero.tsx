@@ -47,20 +47,17 @@ export default function Hero() {
             and OOP.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+          <div className="flex flex-col gap-3 pt-4 w-full max-w-[280px] mx-auto md:mx-0">
             <Link
               href="#projects"
-              className="group px-8 py-4 bg-white text-zinc-950 rounded-full text-lg font-semibold inline-flex items-center gap-3 hover:bg-zinc-200 transition-all active:scale-[0.985]"
+              className="w-full px-6 py-2.5 bg-white text-zinc-950 rounded-2xl text-sm font-semibold tracking-wide text-center hover:bg-zinc-200 transition-all active:scale-[0.985]"
             >
               View My Projects
-              <span className="group-hover:translate-x-1 transition-transform">
-                →
-              </span>
             </Link>
 
             <Link
               href="#contact"
-              className="px-8 py-4 border border-zinc-700 hover:border-zinc-500 rounded-full text-lg font-medium text-white transition-colors"
+              className="w-full px-6 py-2.5 border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 rounded-2xl text-sm font-semibold tracking-wide text-white text-center transition-all"
             >
               Get In Touch
             </Link>

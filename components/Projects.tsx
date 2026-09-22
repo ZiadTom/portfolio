@@ -9,7 +9,7 @@ export default function Projects() {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 mb-8 md:mb-16">
           <div className="lg:w-1/3">
             <div className="sticky top-28">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-emerald-400">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white">
                 Projects
               </h2>
             </div>

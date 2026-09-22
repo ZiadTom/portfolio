@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-white transition-colors">
           {project.title}
         </h3>
 
@@ -49,7 +49,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.apiDocsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium text-emerald-400 border border-emerald-900 hover:border-emerald-500 hover:text-emerald-300 rounded-xl transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium text-zinc-300 border border-zinc-600 hover:border-zinc-400 hover:text-white rounded-xl transition-colors"
             >
               <FileCode2 size={16} />
               API Docs

@@ -54,16 +54,11 @@ export default function Skills() {
   return (
     <section id="skills" className="py-12 md:py-24 bg-zinc-950 border-t border-zinc-900">
       <div className="max-w-6xl mx-auto px-6">
+
         {/* Header */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 mb-8 md:mb-16">
-          <div className="lg:w-1/3">
-            <div className="sticky top-28">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-emerald-400">
-                Skills
-              </h2>
-            </div>
-          </div>
-        </div>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white mb-8 md:mb-16">
+          Skills
+        </h2>
 
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
